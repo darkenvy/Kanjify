@@ -1,0 +1,19 @@
+REGEX
+([^\w\s[:punct:]‘’“”]+)(\w+)
+\1<j>\2</j>
+<span><span>\1</span><span class="j">\2</span></span>
+
+
+// CSS
+span {
+  position: relative;
+}
+span span {
+  display: inline-block;
+}
+.j {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  font-size: 6pt;
+}
